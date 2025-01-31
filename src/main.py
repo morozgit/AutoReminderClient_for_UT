@@ -20,7 +20,6 @@ def set_mileage(value):
         response = requests.post(f"{BASE_URL}/api/get_num", json=payload)
         response.raise_for_status()
 
-        # Возвращаем JSON в корректном формате
         return json.dumps(response.json(), ensure_ascii=False)
     except ValueError:
         return json.dumps({"error": "Ошибка: введено не число"}, ensure_ascii=False)

@@ -57,7 +57,6 @@ MainView {
                         outputLabel.text = "Поле ввода не может быть пустым";
                     } else {
                         python.call("main.set_mileage", [value], function(result) {
-                            console.log('raw result:', result);
 
                             try {
                                 // Преобразуем в строку, если это не строка
@@ -91,7 +90,7 @@ MainView {
                                     }
                                 }
 
-                                outputLabel.text = ""; // Очищаем ошибку
+                                outputLabel.text = "Пробег" + " " + value * 1000;
                             } catch (error) {
                                 console.error("Ошибка обработки JSON:", error.message);
                                 outputLabel.text = "Ошибка: неверный формат данных от сервера";
