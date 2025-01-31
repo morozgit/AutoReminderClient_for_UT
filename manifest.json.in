@@ -1,0 +1,15 @@
+{
+    "name": "auto.yourname",
+    "description": "A short description of your app",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Auto",
+    "hooks": {
+        "auto": {
+            "apparmor": "auto.apparmor",
+            "desktop":  "auto.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Your FullName <email@domain.org>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
